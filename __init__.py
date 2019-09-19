@@ -7,9 +7,9 @@ from .models import Encoder, Decoder
 encode = Encoder()
 decode = Decoder()
 
-enc_state_dict = torch.load('project/shallow_enc_16_2000.pth', map_location='cpu')
+enc_state_dict = torch.load('./shallow_enc_16_2000.pth', map_location='cpu')
 encode.load_state_dict(enc_state_dict)
-dec_state_dict = torch.load('project/shallow_dec_16_2000.pth', map_location='cpu')
+dec_state_dict = torch.load('./shallow_dec_16_2000.pth', map_location='cpu')
 decode.load_state_dict(dec_state_dict)
 
 encode.eval()
